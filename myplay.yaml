@@ -1,0 +1,6 @@
+---
+- name: working with git
+  hosts: all
+  tasks:
+    - name: I don't know let ss
+      command: echo "Let's see if it works"
