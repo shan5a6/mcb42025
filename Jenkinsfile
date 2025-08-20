@@ -1,10 +1,12 @@
 pipeline {
   agent any 
   stages {
-    stage('welcome note') {
+    stage('working with variables') {
       steps {
         script {
-          println "welcome to dvs devops"
+          age = 30
+          subject = "devops"
+          println "age is: ${age} & subject is subject: ${subject}"
         }        
       }
     }
