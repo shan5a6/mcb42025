@@ -19,7 +19,7 @@ pipeline {
           println "my build no is ${BUILD_NUMBER}"
           /* Consume values of parameters */
           println "my selected environment is ${params.ENV}"
-          println "my selected version is ${VERSION}"
+          println "my selected version is ${params.VERSION}"
           /* Consume values of environment variables*/
           println "my java version is ${env.JAVA_HOME}"
         }        
