@@ -1,4 +1,4 @@
-def  myfn(a,b) {
+def  myfn(a,b=100) {
   sum=a+b
   println "sum of ${a} & ${b} is, ${sum}"
 }
