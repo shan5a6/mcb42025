@@ -1,6 +1,6 @@
 def  myfn(a,b=100) {
   sum=a+b
-  println "sum of ${a} & ${b} is, ${sum}"
+  return(sum)
 }
 pipeline {
   agent any 
@@ -8,9 +8,8 @@ pipeline {
     stage('working with function') {
       steps {
         script {
-          myfn(10,20)
-          myfn(300,400)
-          myfn(500)
+          myvalue=myfn(10,20)
+          println "my return value is ${myvalue}"
         }        
       }
     }
