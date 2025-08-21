@@ -1,17 +1,18 @@
-def  myfn(a,b=100) {
-  sum=a+b
-  return(sum)
-}
 pipeline {
+  /*agent server1/docker/kubernetes/any*/
   agent any 
   stages {
-    stage('working with function') {
+    stage('git checkout') {
       steps {
         script {
-          myvalue=myfn(10,20)
-          println "my return value is ${myvalue}"
-        }        
+          File file = new File("/opt/mydata.txt")
+          def lines = file.readLines()
+          println "Lines\n ${lines}"
+          for (line in lines) {
+            println "myline is ${line}"
+          }
+        }
       }
     }
-  }
+  } 
 }
